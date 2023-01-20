@@ -1,0 +1,15 @@
+{
+  "name": "metriport-demo-app-deploy",
+  "version": "1.0.0",
+  "bin": {},
+  "scripts": {
+    "prep-infra": "cd infra/ && npm install && cd ../",
+    "prep-server-app": "cd server/app/ && npm install && cd ../../",
+    "prep-web-app": "cd web-app/app/ && npm install && npm run build && cd ../../",
+    "prep-web-app-staging": "cd web-app/app/ && npm install && npm run build:staging && cd ../../",
+    "prep-deploy": "npm run prep-infra && npm run prep-server-app && npm run prep-web-app",
+    "prep-deploy-staging": "npm run prep-infra && npm run prep-server-app && npm run prep-web-app-staging"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
