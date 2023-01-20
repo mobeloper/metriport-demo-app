@@ -27,6 +27,8 @@ router.post("/", async (req: Request, res: Response) => {
   }
   let value = req.body;
 
+  console.log(value)
+
   try {
     if (value.ping) {
       return res.status(status.OK).json({ pong: value.ping });
