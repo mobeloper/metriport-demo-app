@@ -24,7 +24,7 @@ This is the front-end portion of the project, located under `/web-app`:
 
 - Built using `React`.
 - Source code is located in `/web-app/app`.
-- Infra & deployment code uses `AWS CDK`, and is located in `/web-app/infrastructure`.
+- Infra & deployment code uses `AWS CDK`, and is located in `/infra`.
 - After deployment, the app is stored in an `S3` bucket and distributed via `CloudFront`.
 
 ### Server Components
@@ -33,7 +33,7 @@ This is the back-end portion of the project, located under `/server`:
 
 - Built using `Node.js` + `Express`.
 - Source code is located in `/server/app`.
-- Infra & deployment code also uses `AWS CDK`, and is located in `/server/infrastructure`.
+- Infra & deployment code also uses `AWS CDK`, and is located in `/infra`.
 - The deployment handled as follows:
   - Docker image is built off of the `/server/app` source code. This is what talks to the `RDS` database, and the `Metriport API`.
   - The image is deployed to the `ECR` (elastic container registry).
